@@ -1,5 +1,5 @@
-from database import engine, SessionLocal, Base
-from models import Prediction
+from backend.database import engine, SessionLocal, Base
+from backend.models import Prediction
 import datetime
 from fastapi import FastAPI, UploadFile, File
 from ultralytics import YOLO
