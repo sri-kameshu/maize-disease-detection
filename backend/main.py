@@ -22,8 +22,10 @@ app.add_middleware(
 # Create tables if not exist
 Base.metadata.create_all(bind=engine)
 
-# Load model once at startup
-model = YOLO("best.pt")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "best.pt")
+
+model = YOLO(MODEL_PATH)
 
 
 def get_severity(percent):
